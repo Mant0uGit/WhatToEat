@@ -1,0 +1,16 @@
+{
+  "name": "what-to-eat-wheel",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "今天吃什么 —— 零依赖零构建的 H5 转盘，帮女朋友决定每天吃啥",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "dev": "node scripts/serve.mjs",
+    "test": "node tests/run.mjs",
+    "check": "node tests/run.mjs && node tests/render.mjs && node tests/structure.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

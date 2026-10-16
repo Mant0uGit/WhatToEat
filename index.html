@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#ffb347" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="今天吃什么？转一下转盘就知道啦～" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23ffb347'/%3E%3Ccircle cx='50' cy='50' r='13' fill='%23fff'/%3E%3C/svg%3E"
+    />
+    <title>今天吃什么 🍚</title>
+
+    <!-- Vue 3 官方生产版本，已经放在本地，所以不依赖任何 CDN，也不需要联网加载框架 -->
+    <script src="./vendor/vue.global.prod.js"></script>
+
+    <!--
+      小提示：如果用「双击 index.html」的方式打开（地址是 file:// 开头），
+      浏览器会因为安全策略拒绝加载 ES Module，页面会白屏。
+      这里提前说明原因并给出正确做法。
+    -->
+    <script>
+      if (location.protocol === 'file:') {
+        document.documentElement.innerHTML =
+          '<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' +
+          '<title>需要用一个网址打开</title></head><body style="margin:0;padding:32px 22px;font:16px/1.8 ' +
+          "system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;color:#6b3f1d;" +
+          'background:linear-gradient(180deg,#fff7ef,#fbe6d3);min-height:100vh;box-sizing:border-box">' +
+          '<h1 style="font-size:1.4rem;margin:0 0 14px">🍚 需要用网址打开，不能双击文件</h1>' +
+          '<p style="margin:0 0 12px">你正在用 <code>file://</code> 的方式打开，浏览器不允许这种页面加载程序脚本。</p>' +
+          '<p style="margin:0 0 12px"><b>正确做法：</b>部署到 Cloudflare Pages / GitHub Pages 后，用 <code>https://</code> 开头的网址打开（也就是要发微信给女朋友的那个链接）。</p>' +
+          '<p style="margin:0">想先在电脑上看效果的话，在项目目录里执行 <code>npm start</code>，然后打开 <code>http://localhost:5173/</code>。</p>' +
+          '</body>'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 脚本没跑起来时的兜底内容 -->
+      <p style="text-align: center; padding: 40px 20px; color: #b07f56">
+        正在打开转盘…如果一直停在这里，请刷新页面。
+      </p>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
